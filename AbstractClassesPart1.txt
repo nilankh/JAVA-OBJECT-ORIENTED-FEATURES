@@ -1,0 +1,78 @@
+Abstract classes: Part1
+It is a container in java it able to allow zero(0) or more numver of concrete methods and 0(zero)
+or more number of abstract methods.
+
+If we are saying it a container, defintely they will include number of variables and methods.
+
+
+-> For abstract classes, we are able to declare only reference variables we are unable to create
+objects.
+
+class A{
+    A a = new A();
+    // a -> this is a reference variable which refers to an object.
+    //when new A() will execute this, new keyword and constructor will create object in memory
+}
+
+abstract class A{
+
+}
+A a = new A();// this will throw an error, new keyword is not possible for abstract classes, object
+are not possible for abstract classes.
+
+Q) Why object are not possible for abstract classes?
+Abstract classes are incomplete classes. For incomplete things we are unable to create objects.
+
+->classes are able to provied less sharability, and abstract classes are able to provide more sharability.
+
+Procedures to use abstract classes in java:
+-------------------------------------------
+
+1)declare an abstract class with "abstract" keyword.
+2)Declare variables and methods in abstract class as per the requirement.
+3)Declare a subclass for the abstract class, and provide implementation for all abstract methods.
+4)In main class, in main() method, create object for subclass and declare reference variable either
+for abstract class or for sub class.
+5)Access members of the abstract class.
+
+package p1;
+abstract class A{ //abstract class allow both concrete method & abstract methods
+    //concrete methods
+    void m1(){
+        system.out.println("m1-A);
+    }
+    //abstract methods
+    abstract void m2();
+    abstract void m3();
+}
+class B extends A{
+    void m2(){
+        system.out.println("m2-B");
+    }
+    void m3(){
+        system.out.println("m3-B");
+    }
+}
+public class Test {
+    public static void main(String[], args){
+        // A a = new A(); Error object creation is not possible for abstract classes.
+        A a = new B();
+        a.m1();
+        a.m2();
+        a.m3();
+
+// at the same time we can create reference variable for subclass also.
+        B b = new B();
+        b.m1();
+        b.m2();
+        b.m3();
+
+    }
+}
+o/p->
+m1-A
+m2-B
+m3-B
+m1-A 
+m2-B 
+m3-B 
