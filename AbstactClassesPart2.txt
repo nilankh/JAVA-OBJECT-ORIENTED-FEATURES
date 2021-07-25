@@ -1,0 +1,70 @@
+Q)What is the difference between declaring reference variable for abstract class and declaring
+reference variable for sub class?
+
+ans-> If we declare reference variable for abstract class then we are able to access only abstract
+class members we are unable to access subclass own members.
+But, if we declare reference variable for subclass then we are able to access both abstract class
+members as well as subclass own members.
+
+package p1;
+abstract class A{
+    void m1(){
+        system.out.println("m1-A");
+    }
+    abstract void m2();
+    abstract void m3();
+}
+class B extends A{
+    void m2(){
+        system.out.println("m2-B");
+    }
+    void m3(){
+        system.out.println("m3-B");
+    }
+    //This "m4" method is not defined in abstract class it is defined inside the subclass.
+    void m4(){
+        system.out.println("m4-B");
+    }
+}
+public class Test{
+    public static void main(String[], args){
+        // A a = new A(); Error object creation is not possible for abstract classes.
+        A a = new B();
+        a.m1();
+        a.m2();
+        a.m3();
+        a.m4();// it will throw an error, because m4 method is not defined inside the abstract class A,
+        it is defined inside subclass B.
+
+        system.out.println();
+        B b = new B();
+        b.m1();
+        b.m2();
+        b.m3();
+        b.m4();
+    }
+}
+o/p->
+m1-A
+m2-B
+m3-B
+
+m1-A 
+m2-B 
+m3-B
+
+Q)What is the difference between concrete class and abstract class?
+
+ans-> 
+    Concrete classes are able to allow only concrete methods.
+    Abstract classes are able to allow both concrete methods and abstract methods.
+
+    To declare classes we have to use "class" keyword.
+    To declare abstract classes we must use "abstract" keyword along with "class" keyword.
+
+    For classes we are able to create both reference variables and objects.
+    For the abstract classes we are able to declare reference variables, we are unable
+    to create objects.
+
+    In java applications, classes are able to provide less sharability.
+    Abstract classes are able to provide more sharability.
