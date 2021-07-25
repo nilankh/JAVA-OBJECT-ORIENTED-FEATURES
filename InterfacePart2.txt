@@ -1,0 +1,110 @@
+Q)Difference between declaring reference variable for interface and declaring reference variable for
+implementation class?
+ans->
+
+package p1;
+Interface I{
+    int x = 10;//by default public static final(static-> we can access this variable by using interface name).
+                                                (final -> That value is fixed we can't change throughout the app).
+    void m1(); //by default public abstract.
+    void m2(); //by default public abstract.
+    void m3(); // by default public abstract.                                                
+}
+
+class A implements I{
+    public void m1(){
+        syso("m1-A");
+    }
+    public void m2(){
+        syso("m2-A");
+    }
+    public void m3(){
+        syso("m3-A");
+    }
+}
+
+public class Test{
+    public static void main(String[] args){
+        I i = new A(); //creating object for implementation class.
+        //reference variable for interface class.
+        i.m1();
+        i.m2();
+        i.m3();
+
+        A a = new A();
+        // reference variable for implementation class.
+        a.m1();
+        a.m2();
+        a.m3();
+
+    }
+}
+o/p->
+m1-A 
+m2-A 
+m3-A 
+m1-A 
+m2-A 
+m3-A 
+
+
+
+-----
+package p1;
+Interface I {
+    int x = 10;
+    void m1();
+    void m2();
+    void m3();
+}
+
+class A implements I{
+    public void m1(){
+        syso("m1-A");
+    }
+    public void m2(){
+        syso("m2-A");
+    }
+    public void m3(){
+        syso("m3-A");
+    }
+    public void m4(){
+        syso("m4-A");
+    }
+}
+
+public class Test{
+    public static void main(String[] args){
+        I i = new A();
+        i.m1();
+        i.m2();
+        i.m3();
+        i.m4();//Compilation error(Because it is not implemented in Interface I)
+
+        A a = new A();
+        a.m1();
+        a.m2();
+        a.m3();
+        a.m4();
+
+        //In above program to access x = 10 there are 4 possibilities.
+        syso(I.x);  // 1) By interface name.
+        syso(i.x);  // 2) By reference variable for interface class.
+        syso(A.x);  // 3) By implementation class Name.
+        syso(a.x);  // 4) By reference variable for implementation class.
+    }
+
+}
+
+o/p->
+m1-A 
+m2-A 
+m3-A 
+m1-A 
+m2-A 
+m3-A 
+m4-A 
+10
+10
+10
+10
