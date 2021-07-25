@@ -1,0 +1,38 @@
+-> Interface is a java feature[container] it able to allow 0(zero) or more number of abstract 
+methods.
+
+->To declare interfaces we will use "interface" keyword.
+
+->For interface, we are able to declare references variables, we are unable to create objects.
+
+{
+    Abstract class -> Partially implemented one
+    interface -> Fully incomplete
+}
+
+-> In case of interfaces by default all variables are "public static final", no need to declare
+explicitly.
+
+->Interfaces are able to provide more sharability incompare to abstract and classes.
+
+Procedures to use interface in java applications:
+-------------------------------------------------
+
+1) Declare an interface by using "interface" keyword.
+2) Declare variables and methods inside the interface as per requirement.
+3) Declare an implementation class(Just like subclass, it is applicable for classes and abstract 
+classes but for interface subclass is not called, it is called implementation class) for the 
+interface.
+4) Provide implementation for all the abstract methods which are declared in interface.
+5) In main class, in main() method, create object for implementation class and declare references
+variable either for interface or for implementation class.
+
+Note: If we declare reference variable for interfaces then we are able to access only interface
+members, but we are unable to access implementation class own members, but if we declare reference
+variable for implementation class then we are able to access both interface members and implementation
+class own members.
+
+Q)Difference between declaring reference variable for interface and declaring reference variable for
+implementation class?
+
+#Continue in interface part2
