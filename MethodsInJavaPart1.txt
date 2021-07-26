@@ -1,0 +1,102 @@
+Methods in java.
+-----------------
+
+Methods syntax Part1:
+---------------------
+In java applications entities are represented as classes, entities data are represented as variables.
+entities behaviours or actions are represented as methods.
+Method is a set of instruction, it can be used to represented a particular action of an entity.
+
+
+class Transaction{
+    String accNo;
+    String accHolderName;
+    String accType;
+    long balance;
+
+    //Method, behaviour, action.
+    public void deposit(String accNo, int depAmt){
+        ------
+    }
+    public void withdraw(String accNo, int wdAmt){
+        ------
+    }
+    public void transferFund(String sourceAccount, String targetAccount, int transferAmt){
+        ------
+    }
+}
+
+Syntax:
+-------
+[Access Modifiers] Return_Type_methodName([Param_List])[throws Exe_list]{
+    ---Instructions----
+}
+
+Access modifiers in methods:
+----------------------------
+->  To define scope to the methods public, protected, <default>, and private.
+->  To define some extra nature to the methods static, final, abstract, native, volatile, transient, synchronized, strictfp,....
+
+1)  
+class A{
+    void m1(){
+        syso("m1-A");
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        a.m1();
+    }
+}
+o/p -> m1-A 
+------------------------------------------------------------------
+
+2)
+class A{
+    private void m1(){
+        syso("m1-A");
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        a.m1();
+        //but if we comment this line then compile the code, then its get compiled
+    }
+}
+o/p -> Error 
+------------------------------------------------------------------
+
+3)
+class A{
+    protected void m1(){
+        syso("m1-A");
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        a.m1();
+        
+    }
+}
+o/p-> m1-A (allowed)
+-----------------------------------------------------------------------------------
+
+4)
+class A{
+    public void m1(){
+        syso("m1-A");
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        a.m1();
+    }
+}
+o/p-> m1-A (allowed)
+------------------------------------------------------------------------------------
+
+In method syntax public, protected, <default>, and private are allowed.

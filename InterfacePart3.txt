@@ -8,6 +8,7 @@ ans->
 2)  To declare classes, we are able to use "class" keyword.
     To declare abstract classes, we will use "abstract" keyword.
     To declare interfaces we will use "interface" keyword.
+[There are some changes in java8 and java9]
 
 3)  For classes only, we are able to create both reference variables and objects.
     For abstract classes and interfaces we are able to declare reference variables only, we are
