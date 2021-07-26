@@ -1,0 +1,36 @@
+Q) What are the Differences between classes, abstract classes and interfaces?
+
+ans-> 
+1)  Classes are able to allow only concrete methods.
+    Abstract classes are able to allow both concrete methods and abstract methods.
+    Interface are able to allow only abstract methods.
+
+2)  To declare classes, we are able to use "class" keyword.
+    To declare abstract classes, we will use "abstract" keyword.
+    To declare interfaces we will use "interface" keyword.
+
+3)  For classes only, we are able to create both reference variables and objects.
+    For abstract classes and interfaces we are able to declare reference variables only, we are
+    unable to create objects.
+
+4)  In case of interfaces, by default, all variables are "public static final".
+    In case of classes and abstract classes, no default cases are existed for variables.
+
+5)  In case of interfaces, by default, all methods are "public abstract".
+    In cases of class and abstract class, no default cases are existed for methods.
+
+6)  Classes are able to provide less sharability.
+    Abstract classes are able to provide middle level sharability.
+    Interfaces are able to provide more sharability.
+
+7)  Classes are able to allow constructors.
+    Abstract classes are able to allow constructors.
+    Interfaces are unable to allow constructors.
+
+8)  Classes are able to allow static blocks.
+    Abstract classes are able to allow static blocks.
+    Interfaces are not allowing static blocks.
+
+9)  Classes are able to allow instance blocks.
+    Abstract classes are able to allow instance blocks.
+    Interfaces are not allowing instance blocks.
