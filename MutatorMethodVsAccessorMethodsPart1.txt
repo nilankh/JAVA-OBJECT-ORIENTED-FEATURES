@@ -1,0 +1,22 @@
+Mutator Methods vs Accessor Methods: Part1:
+------------------------------------------
+In JAVA, there are two types of methods wrt the manipulations on object state.
+
+1)Mutator Methods.
+2)Accessor Methods.
+
+Q)What is the difference between Mutator methods and Accessor methods?
+
+ans: 
+    Mutator methods is a java method, it can be used to set/modify data in the respective object.
+    eg: All set XXX() methods in java Bean classes.
+
+    Accessor methods is a java method, it can be used to access/get data from the respective object.
+    eg: All get XXX() methods from java bean classes.
+
+Note:
+    Java bean is a normal java class contains private properties and their respective setter 
+    methods and getter methods these classes are mainly used to represent a particular entity
+    data inorder to move from one class to another class or from one layer to another layer of
+    enterprise applications.
+    
