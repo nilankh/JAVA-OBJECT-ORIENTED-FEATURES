@@ -1,0 +1,55 @@
+class Employee{         //this is called java bean class
+    private int eno;
+    private String ename;
+    private float esal;
+    private String eaddr;
+
+    // Mutator Methods
+    public void setEno(int empNo){
+        eno = empNo;
+    }
+
+    public void setEname(String empName){
+        ename = empName;
+    }
+
+    public void setEsal(float empSal){
+        esal = empSal;
+    }
+
+    public void setEaddr(String empAddr){
+        eaddr = empAddr;
+    }
+
+}
+
+//Accessor methods
+public int getEno(){
+    return eno;
+}
+
+public String getEname(){
+    return ename;
+}
+
+public float getEsal(){
+    return esal;
+}
+
+public String getEaddr(){
+    return eaddr;
+}
+
+class Test{
+    public static void main(String[] args){
+        Employee e = new Employee();
+        e.setEno(111);
+        e.setEname("AAA");
+        e.setEsal(5000);
+        e.setEaddr("DBG");
+        sopln(e.getEno());
+        sopln(e.getEname());
+        sopln(e.getEsal());
+        sopln(e.getEaddr());
+    }
+}
