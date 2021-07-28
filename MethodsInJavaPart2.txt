@@ -1,0 +1,88 @@
+Method syntax part2:
+--------------------
+
+->  class A{
+    static void m1(){
+        syso("m1-A");
+    }
+}
+allowed
+
+->  class A{
+    final void m1(){
+        syso("m1-A");
+    }
+}
+allowed
+
+->  abstract class A{
+    abstract void m1();
+}
+allowed
+
+->  class A{
+        native void m1();
+}
+allowed
+
+->  class A{
+    volatile void m1(){
+        syso("m1-A");
+    }
+}
+volatile is only applicable for varibale so not allowed
+
+->  class A{
+        transient void m1(){
+            syso("m1-A");
+        }
+}
+Transient is only applicable for varibale methods so not allowed.
+
+->  class A{
+    synchronized void m1(){
+        syso("m1-A");
+    }
+}
+allowed
+
+->  class A{
+    staticfp void m1(){
+        syso("m1-A");
+    }
+}
+allowed
+
+In second list of access modifiers in method, methods are able to allow static, final, abstract, native, synchronized, strictfp.
+
+Note:   java methods are able to allow more than one access modifiers, but they must be provided in valid combination.
+
+class A{
+    public static void m1(){
+
+    }
+}
+allowed
+->From first list of access modifiers and second list of access modifiers combination possible.
+
+-> From first list of access modifiers we have to provide one at a time, either public, protected, <default> or private.
+   But in second list of access modifiers we can provide any number of access modifiers in valid combination.
+
+   class A{
+       static final void m1(){
+
+       }
+   }
+allowed
+
+
+->  abstract and static invalid combination.
+->  final and abstract invalid combination.
+->  private and abstract invalid combination.
+->  protected and abstract are allowed.
+->  static and synchronized are allowed.
+
+eg for valid combination: static final
+                          static synchronized
+eg for invalid combination: static abstract
+                            final  abstract
