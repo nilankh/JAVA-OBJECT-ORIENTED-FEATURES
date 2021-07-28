@@ -1,0 +1,89 @@
+Method syntax part3:
+--------------------
+
+->  Method return type is representing which type of data we are going to return from the 
+    present method.
+->  Java method are able to allow all primitive data type like byte, short, int, long, float, double
+    , char, all user defined data types like classes, abstract classes, arrays, interfaces,... 
+    and "void"
+
+Note:   "void" return type is representing no data is returning from methods.
+
+->  class A{
+    void m1(){
+        syso("m1-A");
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        a.m1();
+    }
+}
+
+->  class X{
+
+}
+class A{
+    X m1(){
+        X x = new X();
+        return x;
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        X x = a.m1();
+        syso(x);
+    }
+}
+o/p-> X@15bdc
+
+->  In method syntax where method name is an identifier, it can be used to recognize the methods
+    individually
+
+    where the purpose of parameter list is to take some input data in order to perform action which
+    is represented by the present method.
+
+    where method parameters may be all primitive data type like byte, short, int, long, float, double,
+    char, boolean, all user defined data types like all classes, abstract classes, arrays, interfaces,...
+
+class A{
+    int add(int i, int j){
+        int result = i + j;
+        return result;
+    }
+}
+class Test{
+    public static void main(String[] args){
+        A a = new A();
+        int sum = a.add(10, 20);
+        sopln("ADD: " + sum);
+    }
+}
+o/p-> ADD: 30
+
+user defined data types
+->  class X{
+        void m2(){
+            sopln("Inside m2()-X");
+        }
+}
+class A{
+    void m1(X x){
+        sopln("Inside m1()-A");
+        x.m2();
+    }
+}
+class Test{
+    public static void main(String[] args){
+        X x = new X();
+        A a = new A();
+        a.m1(x);
+    }
+}
+o/p-> inside m1()-A 
+      inside m2()-X 
+
+->  where "throws" is a java keyword it can be used to bypass the generated exception from present method to the called 
+    method.
