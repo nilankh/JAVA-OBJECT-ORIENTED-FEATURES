@@ -1,0 +1,22 @@
+Method signature and prototype:
+-------------------------------
+There are two approaches avilable to describe method information:
+    1)  Method signature.
+    2)  Method prototype.
+
+Q)  What is the difference between method signature and method prototype?
+
+ans:Method signature is a description of the method, it include method name and parameter list.
+    eg: forName(String class_Name)
+        add(int fval, int sval)
+    here "add" is method name.
+    &
+    (int fval, int sval) this is parameter list.
+
+Method prototype is method description, it includes access modifiers list, return type, method name,
+parameter list, throws exception list.
+
+eg:
+public static class forName(String className) throws classNotFoundException
+
+public int add(int fval, int sval)
